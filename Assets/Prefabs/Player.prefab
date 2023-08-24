@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: 3374474698650220464}
   - component: {fileID: -5578522643109164369}
   - component: {fileID: 172278979234960011}
+  - component: {fileID: -2127323876680332538}
+  - component: {fileID: -1023871238450734815}
+  - component: {fileID: -6704719495524925903}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -146,7 +149,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   target: {fileID: 7177263690553239080}
-  clientAuthority: 1
+  clientAuthority: 0
   syncPosition: 1
   syncRotation: 1
   syncScale: 0
@@ -164,3 +167,68 @@ MonoBehaviour:
   positionPrecision: 0.01
   scalePrecision: 0.01
   timelineOffset: 0
+--- !u!143 &-2127323876680332538
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076918871786625396}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1023871238450734815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076918871786625396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576822cfd4d08f3478610090c9b48e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerWalkingSpeed: 5
+  playerRunningSpeed: 15
+  jumpStrength: 20
+  verticalRotationLimit: 80
+  pickupSound: {fileID: 0}
+  flash: {fileID: 0}
+  HealthBoxPickup: 20
+  ArmourBoxPickup: 50
+  AmmoBoxPickup: 15
+  AmmoShotgunPickup: 2
+--- !u!114 &-6704719495524925903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8076918871786625396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b1ade1ea6b7333429e3303b9d9308f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  maxArmor: 0
+  healthOnStart: 0
+  armourOnStart: 0
+  levelScore: 0
+  armor: 0
+  health: 0
+  hit: {fileID: 0}
+  flash: {fileID: 0}
+  healthText: {fileID: 0}
+  armorText: {fileID: 0}
+  levelScoreText: {fileID: 0}
+  faceAnim: {fileID: 0}
