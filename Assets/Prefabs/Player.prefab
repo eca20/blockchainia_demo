@@ -251,7 +251,7 @@ MonoBehaviour:
   playerCam: {fileID: 8751853360593724591}
   cameraSensitivity: 0.33
   speed: 10
-  jumpHeight: 1.5
+  jumpHeight: 6
   feet: {fileID: 3773397047200441502}
   isGrounded: 0
   gravity: 9.81
