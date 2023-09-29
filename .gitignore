@@ -11,6 +11,7 @@
 /[Uu]ser[Ss]ettings/
 /[Aa]ssets/[Rr]etro*FPS*Kit/
 /Packages\packages-lock.json
+/ProjectSettings\Packages\com.unity.probuilder\Settings.json
 
 
 # MemoryCaptures can get excessive in size.
