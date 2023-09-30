@@ -37,7 +37,10 @@ public class FPSController : NetworkBehaviour
         move.Enable();
         jump.Enable();
         mouseX.Enable();
-        mouseY.Enable();
+        /*
+        *   mouseY is disabled until we program the weapon to follow the player camera angle.
+        */
+        //   mouseY.Enable();
     }
 
     void OnDisable() {
@@ -85,7 +88,7 @@ public class FPSController : NetworkBehaviour
         if(isGrounded == true) {
             velocity = new Vector3(0f, -3f, 0f);
         } else {
-             velocity -= Vector3.up * gravity * Time.deltaTime;
+             velocity -= Vector3.up * gravity*2 * Time.deltaTime;
 
         }
         jump.performed += ctx => Jump();
