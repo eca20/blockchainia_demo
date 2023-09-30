@@ -71,7 +71,7 @@ public class Pistol : MonoBehaviour
 	void FixedUpdate()
 	{
 		// Calculating spread of the weapon (pattern of where the projectile shoots around crosshair)
-		Vector2 bulletOffset = Random.insideUnitCircle * DynamicCrosshair.spread;
+		Vector2 bulletOffset = Random.insideUnitCircle;
 
 		// Creating projectile area from our camera to the center of the screen
 		Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2 + bulletOffset.x, Screen.height / 2 + bulletOffset.y, 0));
@@ -81,7 +81,6 @@ public class Pistol : MonoBehaviour
 		if (isShot == true && ammoClipLeft > 0 && isReloading == false)
 		{
 			isShot = false; //After shot, let's set "not shooting" state, as before next shot we have a break
-			DynamicCrosshair.spread += DynamicCrosshair.PISTOL_SHOOTING_SPREAD; //Get spread
 			ammoClipLeft--; //Remove ammo from pistol
 			source.PlayOneShot(shotSound); //Play sound of shooting once each shot
 			StartCoroutine("shot"); //Start function of shooting
