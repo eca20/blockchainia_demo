@@ -30,66 +30,6 @@ Transform:
   m_Father: {fileID: 6277425797386285591}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2283583633228575214
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7536775471255158521}
-  m_Layer: 0
-  m_Name: HipFire Position
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7536775471255158521
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2283583633228575214}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.337, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_Children: []
-  m_Father: {fileID: 8751853360593724591}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5849560440366045626
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7249142340192292590}
-  m_Layer: 0
-  m_Name: ADS Position
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7249142340192292590
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5849560440366045626}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.02, z: 0.554}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8751853360593724591}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &6064745544400124535
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,12 +137,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6181666359532396840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1886652551974122112}
-  - {fileID: 7536775471255158521}
-  - {fileID: 7249142340192292590}
   m_Father: {fileID: 6277425797386285591}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -256,7 +194,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6181666359532396840}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1 &7134617375311884041
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +211,7 @@ GameObject:
   - component: {fileID: -3114266080666592056}
   - component: {fileID: 6969470760983489529}
   - component: {fileID: 354667108227439870}
+  - component: {fileID: 4164046746449567393}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -509,8 +448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b048bcd01740a42873d56615999c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HipFirePos: {fileID: 7536775471255158521}
-  ADSPos: {fileID: 7249142340192292590}
+  HipFirePos: {fileID: 0}
+  ADSPos: {fileID: 0}
   gunParent: {fileID: 1886652551974122112}
   aimSpeed: 3
   aimRotateSpeed: 5
@@ -576,6 +515,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reloadKey: 114
+--- !u!114 &4164046746449567393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134617375311884041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9b1a2e19a0a0c42a3d9dcecfc3f153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  defense: 2
 --- !u!1 &7924557430568057843
 GameObject:
   m_ObjectHideFlags: 0

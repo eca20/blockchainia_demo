@@ -3198,6 +3198,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355896934}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1382632158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3304688881997867740, guid: f587849a64f8dad429104d924512a668,
+    type: 3}
+  m_PrefabInstance: {fileID: 1585954986}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1382632161
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382632158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1424379199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,6 +3420,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 3492750318607071505, guid: f587849a64f8dad429104d924512a668,
+        type: 3}
+      propertyPath: defense
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5828421512158399008, guid: f587849a64f8dad429104d924512a668,
         type: 3}
       propertyPath: m_RootOrder
@@ -3455,7 +3480,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7898239356935019959, guid: f587849a64f8dad429104d924512a668,
+        type: 3}
+      propertyPath: sceneId
+      value: 2565732544
+      objectReference: {fileID: 0}
+    - target: {fileID: 7991650686198201481, guid: f587849a64f8dad429104d924512a668,
+        type: 3}
+      propertyPath: sceneId
+      value: 69096427
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7464787381073134815, guid: f587849a64f8dad429104d924512a668, type: 3}
+    - {fileID: 4735837421294128380, guid: f587849a64f8dad429104d924512a668, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f587849a64f8dad429104d924512a668, type: 3}
 --- !u!1 &1624530885
 GameObject:

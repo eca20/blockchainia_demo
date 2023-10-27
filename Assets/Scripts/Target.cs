@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
 public class Target : MonoBehaviour, IDamageable
 {
@@ -9,13 +10,15 @@ public class Target : MonoBehaviour, IDamageable
     [SerializeField]
     public float health = 100f;
 
+    [SerializeField]
+    public float defense;
+
     public void Damage(float Damage)
     {
-        health -= Damage;
-        if(health <= 0){
-            Destroy(gameObject);
+        health -= Damage / defense;
+        if(health <= 0 && gameObject != null) {
+                Destroy(gameObject);
         }
     }
-
 
 }
