@@ -35,11 +35,13 @@ public class Gun : MonoBehaviour
 
     private bool CanShoot() => !gunData.reloading && timeSinceLastShot > 1f / (gunData.fireRate / 60f);
     public void Shoot(){
-        Debug.Log("Player Shot!");
+     
 
         if(gunData.currentAmmo > 0)
         {
             if (CanShoot()){
+                   Debug.Log("Player Shot!");
+                   Debug.Log("Ammo: " + gunData.currentAmmo);
 
                 if(Physics.Raycast(muzzle.position, muzzle.forward, out RaycastHit hitInfo, gunData.maxDistance));
                 {
@@ -61,5 +63,6 @@ public class Gun : MonoBehaviour
     }
 
     private void OnGunShot(){
+        Debug.Log("OnGunShot() called");
     }
 }

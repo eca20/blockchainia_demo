@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class Target : MonoBehaviour, IDamageable
+public class Target : NetworkBehaviour, IDamageable
 {
     
     [Header("Stats")]
@@ -17,8 +17,13 @@ public class Target : MonoBehaviour, IDamageable
     {
         health -= Damage / defense;
         if(health <= 0 && gameObject != null) {
-                Destroy(gameObject);
+            Elimination();
         }
+    }
+
+    public void Elimination(){
+         Destroy(gameObject);
+         NetworkServer.Destroy(gameObject);
     }
 
 }
