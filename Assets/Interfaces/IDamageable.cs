@@ -4,6 +4,5 @@ using UnityEngine;
 
 public interface IDamageable 
 {
-    // Start is called before the first frame update
     public void Damage(float damage);
 }

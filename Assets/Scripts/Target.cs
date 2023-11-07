@@ -22,8 +22,11 @@ public class Target : NetworkBehaviour, IDamageable
     }
 
     public void Elimination(){
-         Destroy(gameObject);
-         NetworkServer.Destroy(gameObject);
+        Component component = GetComponent<Gun>();
+
+        if (gameObject.GetType() != component.GetType()) {
+        NetworkServer.Destroy(gameObject);
+        }
     }
 
 }
