@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,9 @@ using Mirror;
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : NetworkBehaviour
 {
+    [SerializeField] private TextMesh playerName;
+
+
     [Header("Camera")]
     public Transform playerRoot;
     public Transform playerCam;
@@ -16,6 +20,16 @@ public class FPSController : NetworkBehaviour
 
     float rotX;
     float rotY;
+
+    // [SyncVar(hook = nameof(OnNameChanged))]
+    // public string userName;
+    // [SyncVar] private int currentHealth = 100;
+    // [SyncVar] private bool isDead = false;
+
+    // #region Player Statistics
+    // [SyncVar] private int kills = 0;
+    // [SyncVar] private int deaths = 0;
+    // #endregion
 
     [Header("Movement")]
     CharacterController controller;
@@ -32,15 +46,27 @@ public class FPSController : NetworkBehaviour
     public InputAction mouseX;
     public InputAction mouseY;
 
+    // [Header("Administrative")]
+    // [SerializeField] private GameObject[] disableUponDeath;
+
+    // private void SetupCamera()
+    // {
+    //     if (!isLocalPlayer)
+    //     {
+    //         return;
+    //     }
+        
+    //     var cameraTransform = playerCam.gameObject.transform;
+    //     cameraTransform.parent = playerRoot.transform;
+    //     cameraTransform.position = playerRoot.transform.position;
+    //     cameraTransform.rotation = playerRoot.transform.rotation;
+    // }
 
     void OnEnable() {
         move.Enable();
         jump.Enable();
         mouseX.Enable();
-        /*
-        *   mouseY is disabled until we program the weapon to follow the player camera angle.
-        */
-        //   mouseY.Enable();
+        mouseY.Enable();
     }
 
     void OnDisable() {
@@ -92,6 +118,8 @@ public class FPSController : NetworkBehaviour
 
         }
         jump.performed += ctx => Jump();
+
+        
     }
 
     void Jump(){
@@ -100,4 +128,40 @@ public class FPSController : NetworkBehaviour
         }
     }
 
+    // private IEnumerator Respawn () {
+    //     yield return new WaitForSeconds(5f);
+
+    //     var spawnPoint = new Vector3(23f, 0.75f, 0f);
+    //     transform.position = spawnPoint;
+    //     transform.rotation = Quaternion.identity;
+
+    //     yield return new WaitForSeconds(0.1f);
+
+    //     ShowGameObjectsUponRespawn();
+    //     SetDefaultValues();
+    //     SetupCamera();
+
+    //     Debug.Log(userName + " respawned.");
+    // }
+
+    //    private void SetDefaultValues()
+    //     {
+    //         currentHealth = 100;
+    //         isDead = false;
+    //     }
+
+    // private void ShowGameObjectsUponRespawn()
+    // {
+    //     foreach (var item in disableUponDeath)
+    //     {
+    //         item.SetActive(true);
+    //     }
+    // }
+
+
+    // private void OnNameChanged(string oldValue, string newValue)
+    // {
+    //     playerName.text = userName;
+    // }
+ 
 }

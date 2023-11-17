@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
-public class Target : NetworkBehaviour, IDamageable
+public class Target : MonoBehaviour, IDamageable
 {
     
     [Header("Stats")]
@@ -15,18 +15,18 @@ public class Target : NetworkBehaviour, IDamageable
 
     public void Damage(float Damage)
     {
-        health -= Damage / defense;
-        if(health <= 0 && gameObject != null) {
+       this.health -= Damage;
+        if(this.health <= 0 && gameObject != null) {
             Elimination();
         }
     }
 
     public void Elimination(){
-        Component component = GetComponent<Gun>();
-
-        if (gameObject.GetType() != component.GetType()) {
+        // add experiece
+        // when all enemies eliminated, end round
+        //
+        Debug.Log("Eliminating GameObject: " + gameObject);
         NetworkServer.Destroy(gameObject);
-        }
     }
 
 }

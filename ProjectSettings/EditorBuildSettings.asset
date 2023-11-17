@@ -5,19 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Retro FPS Kit/Scenes/MainMenu.unity
     guid: 0bcaa616992ff144f814b9fcb4412545
-  - enabled: 1
+  - enabled: 0
     path: Assets/Retro FPS Kit/Scenes/LevelSelect.unity
     guid: e02d196766f556f41acc081b68bfdbe5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Retro FPS Kit/Scenes/level1.unity
     guid: 231f9bc2a547bf64b85e6ac9ec65869a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Retro FPS Kit/Scenes/NewLevelExample.unity
     guid: 285a5d0d18bd8e843af3f8163db757f3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Retro FPS Kit/Scenes/AnotherLevel.unity
     guid: e980f7e635a0c0d42bcd1f99a6702274
+  - enabled: 1
+    path: Assets/Scenes/Main.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Player Menu.unity
+    guid: d5f755cffb5e31e4db0a4f73564607d6
   m_configObjects: {}
