@@ -254,7 +254,6 @@ MonoBehaviour:
   playerRoot: {fileID: 6277425797386285591}
   playerCam: {fileID: 8751853360593724591}
   cameraSensitivity: 0.33
-  userName: 
   speed: 15
   jumpHeight: 6
   feet: {fileID: 3773397047200441502}
@@ -356,7 +355,6 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Mouse Y
       m_Flags: 0
-  disableUponDeath: []
 --- !u!114 &6774313881506343036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,10 +448,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f1f156b74136e4abee0944d8e7f529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncDirection: 0
-  syncMode: 0
-  syncInterval: 0
   reloadKey: 0
+  firstPersonCamera: {fileID: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &86697179252148762
 MonoBehaviour:
   m_ObjectHideFlags: 0

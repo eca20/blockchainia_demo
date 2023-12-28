@@ -28,7 +28,7 @@ public class Gun : MonoBehaviour
         Debug.Log("StartReload() called");
 
         // if(!gunData.reloading ){
-        if( this.gunData != null){
+        if(gunData != null){
             if(!this.gunData.reloading && this.gameObject.activeInHierarchy){
 
                 StartCoroutine(Reload());
